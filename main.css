@@ -1,0 +1,231 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; /*ini maksundya supaya besar smua ukuran box sudah includ padding/margin*/
+}
+/* normalize css diisntal  dgn npm install normalize.css */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* temp css */
+body {
+  padding: 2rem 5rem;
+}
+
+/* temp css */
+/*  hasil copy dari https://type-scale.com/ dgn pilihan spectra dan karla (body) */
+@import url("https://fonts.googleapis.com/css?family=Karla:400|Spectral:400");
+
+html {
+  font-size: 100%;
+} /*16px  acuan kita 1 rem sesuai pilihan waktu di typescale.co*/
+
+/* buat variable css  */
+:root {
+  /* primary-color */
+  --primary100: #e0deff;
+  --primary200: #c1beff;
+  --primary300: #a29dff;
+  --primary400: #837dff;
+  --primary500: #645cff; /*(yg dilock)*/
+  --primary600: #504acc;
+  --primary700: #3c3799;
+  --primary800: #282566;
+  --primary900: #141233;
+  /* #fff warna putih dan waran hitam #000 tidak dipakai 
+  cariablenya langsung --black dan --white
+  */
+
+  --black: #000;
+  --white: #fff;
+  /* utk warna warning/alert diambil dari bootsteap */
+  --red-light: #f8d7da;
+  --green-light: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+
+  /* grey warna secondary */
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+  --headingFont: "Spectral", serif;
+  --bodyFont: "karla", sans-serif;
+  --smallText: 0.7em; /* pakai em karena patokanya pda parent yg wraping dirinya saat itu bukan dari html yg patokanya 16px,
+  jadi patokanya font-size dari parent tag yg saat itu wraping dirinya
+  */
+
+  /* Rest of Vars */
+  --backgroundColor: var(--gray-100);
+  --textColor: var(--gray-900);
+  --backGround: #0f0e17;
+  --headline: #fffffe;
+  --ButtonColor: #ff8906;
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --fixed-width: 600px;
+
+  /* shadow box */
+  --shadow-1: 11px 20px 25px 9px rgba(0,0,0,0.38)
+  --shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-3: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.06);
+  --shadow-4: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.06);
+}
+
+/*  implmentasikan gray pada body  gray-50 */
+body {
+  background: var(--backgroundColor);
+  font-family: var(--bodyFont); /* bodyFont variable */
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--textColor);
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  /*headingFont variable     */
+  /* margin: 3rem 0 1.38rem; ganti dibawah */
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text-small {
+  font-size: var(
+    --smallText
+  ); /* aslinya 0.8rem dari html tapi kita ganti 0.7em
+  em patokan dar siparent tag yg wraping saat si small .tet-small ada di dlm parent tsb
+  nilainya 0.7 dari * besar parent yg wraping dia!
+  */
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container {
+  width: 50vw;
+  border: 5px solid var(--primary500);
+  border-radius: var(--borderRadius);
+   box-shadow: var(--shadow-1);
+}
+
+.img {
+  width: 100%;
+   display: block; 
+  object-fit: cover; /* supaya gambar gk pecah kalau kecil  */
+ 
+}
+
+/* BUTTON  */
+.btn  {
+  cursor:pointer;
+  color:var(--white);
+  background: var(--primary500);
+  border:transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding:0.375rem 0.75rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+
+}
+
+/* button ketika di hover: */
+.btn:hover {
+  background:var(--primary700);
+  color:var(--primary200);
+  box-shadow:var(--shadow-3);
+  cursor:pointer;
+}
+
+/* utk hipster button : */
+.hipster-btn { 
+color:var(--primary500);
+background:var(--primary200);
+cursor: pointer;
+}
+
+.hipster-btn:hover {
+  color:var(--primary200);
+  background:var(--primary700);
+}
+
+.btn-block {
+
+}
+
+/* ALERTS */
+
+.alert {
+  padding:0.375rem 0.75rem;
+  margin-bottom:1rem;
+  border-color: transparent;
+  border-radius: var(--borderRadius);
+}
+.alert-danger {
+  color:var(--red-dark);
+  background: var(--red-light);
+}
+
+.alert-success {
+  color:var(--green-dark);
+  background: var(--green-light);
+}
+/*
+Hitungn em: 
+How is em calculated in CSS?
+An em is equal to the computed font-size of that element's parent. For example, If there is a div element defined with font-size: 16px then for that div and for its children 1em = 16px 
+
+*/

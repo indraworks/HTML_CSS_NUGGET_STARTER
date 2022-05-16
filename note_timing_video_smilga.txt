@@ -1,0 +1,27 @@
+
+Jairo Espinel
+6 months ago
+Timestamps:
+
+(00:00) -- Intro and Initial setup.
+(05:02) -- HTML text tags (headings and p).
+(06:53) -- Normalize CSS.
+(09:40) -- Choosing fonts 🗛.
+(11:26) -- Font sizes (scale).
+(13:58) -- General styles (type-scale code, adjustments) & Font variables.
+(22:34) -- Colors: main variables 🟠🔵🟢🟡.
+(25:07) -- Colors: palette resources.
+(38:07) -- Happy hues (color palettes).
+(27:07) -- Colors: primary shades to variables.
+(31:02) -- Colors: grey shades.
+(34:11) -- Control variables.
+(39:28) -- Additional variables (layout, spacing, shadows, etc).
+(45:50) -- Images (width, display and object-fit) 🖼.
+(51:14) -- Why classes, not tags for img, button, form (extra control).
+(52:50) -- Buttons (regular, hipster 😂 and form btn) 🖲.
+(1:00:06) -- Error and Success styles (alerts) ⚠.
+(1:03:51) -- Forms - HTML 🧾.
+(1:09:09) & (1:11:58) -- Forms - CSS.
+(1:11:03) -- Forms - Centering.
+(1:18:18) -- Loading spinner.
+(1:21:20) -- Section title w/ underline.
